@@ -12,7 +12,7 @@ public class SecurityConfigurer {
     @Bean
     public SecurityFilterChain securityFilter(HttpSecurity http) throws Exception {
         http.authorizeHttpRequests((request) -> request
-                .antMatchers("/home").permitAll()
+                .antMatchers("/sbi/loan").permitAll()
                 .anyRequest().authenticated()
         ).formLogin();
         return http.build();
